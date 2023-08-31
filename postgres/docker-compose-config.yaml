@@ -1,0 +1,13 @@
+version: '1'
+
+services:
+  postgres-local:
+    image: postgres:11
+    container_name: postgres-local
+    volumes:
+      - /Users/yancy.huang/postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/var/lib/postgresql/data/pgdata
